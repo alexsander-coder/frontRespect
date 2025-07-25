@@ -1,0 +1,343 @@
+/* Reset e base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #f4f6f8;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222;
+}
+
+/* Container centralizado */
+.login-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f4f6f8;
+  padding: 16px;
+}
+
+/* Caixa principal */
+.login-box {
+  display: flex;
+  flex-direction: row;
+  width: 88%;
+  max-width: 1100px;
+  background-color: #fff;
+  height: 490px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.login-right h2 {
+  text-align: center;
+  font-size: 33px;
+  font-weight: 600;
+  margin-bottom: 37px;
+  color: #003366;
+  margin-top: -28px;
+}
+
+
+.login-left {
+  flex: 1;
+  background: linear-gradient(135deg, #004083, #003f7f);
+  color: white;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-left h2 {
+  margin-top: 20px;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.login-left p {
+  margin: 20px 0;
+  line-height: 1.6;
+  font-size: 1rem;
+  color: #f0f0f0;
+}
+
+.login-left ul {
+  list-style: disc;
+  margin-left: 20px;
+  margin-top: 10px;
+  line-height: 1.6;
+  color: #dbe9f3;
+  font-size: 0.95rem;
+}
+
+
+
+.logo {
+  width: 140px;
+  margin-bottom: 10px;
+}
+
+/* Lado direito - formulário */
+.login-right {
+  flex: 1;
+  padding: 40px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 38px;
+}
+
+.access-buttons {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.access-btn {
+  flex: 1;
+  margin: 0 4px;
+  padding: 11px 0;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.910rem;
+  color: #00569e;
+  background-color: #f3f4f6;
+  transition: all 0.2s ease-in-out;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.access-btn:hover {
+  background-color: #e2e8f0;
+
+}
+
+.access-btn.selected {
+  background-color: #00569e;
+  color: white;
+}
+
+.access-btn:focus {
+  outline: none;
+  /* Garante que o navegador não adicione borda preta */
+  box-shadow: 0 0 0 2px rgba(0, 86, 158, 0.4);
+  /* Substitui com uma borda suave */
+}
+
+.social-icons {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  margin-top: auto;
+  margin-bottom: -20px;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 1.5rem;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+  color: #FACC15;
+}
+
+.titulo-destaque li {
+  color: #FACC15;
+}
+
+
+
+.theme-toggle-wrapper {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 999;
+}
+
+.theme-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #d1d5db;
+  transition: 0.4s;
+  border-radius: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6px;
+  font-size: 12px;
+  /* ícones menores */
+  color: #333;
+}
+
+.slider:before {
+  content: "";
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.4s;
+}
+
+.switch input:checked+.slider:before {
+  transform: translateX(22px);
+}
+
+/* Ícones */
+.icon-left,
+.icon-right {
+  pointer-events: none;
+}
+
+.links-inline a {
+  color: #2f56d5;
+}
+
+.login-left-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.valeshop-id {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #f0f0f0;
+  opacity: 0.9;
+}
+
+/* ======================= */
+/* MODO ESCURO LOGIN PAGE */
+/* ======================= */
+body.dark-mode {
+  background-color: #111827;
+  color: #f3f4f6;
+}
+
+body.dark-mode .input-field:focus {
+  background-color: #111827;
+  ;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 64, 128, 0.1);
+}
+
+
+body.dark-mode .login-right h2 {
+  color: white;
+}
+
+body.dark-mode .login-container {
+  background-color: #3b3b3b;
+  /* box-shadow: 0 0 12px rgba(0, 0, 0, 0.7); */
+
+}
+
+body.dark-mode .links-inline a {
+  color: #d3d3d3;
+}
+
+body.dark-mode .links-inline a:hover {
+  color: #ffd630;
+}
+
+body.dark-mode .links-inline {
+  color: #d3d3d3;
+}
+
+body.dark-mode .login-box {
+  background-color: #1f2937;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.7);
+}
+
+body.dark-mode .login-left {
+  background: linear-gradient(135deg, #001655, #002395);
+  color: white;
+}
+
+body.dark-mode .login-left p,
+body.dark-mode .login-left ul {
+  color: #cbd5e1;
+}
+
+body.dark-mode .titulo-destaque li {
+  color: #facc15;
+}
+
+body.dark-mode .access-btn {
+  background-color: #374151;
+  color: #f3f4f6;
+}
+
+body.dark-mode .access-btn.selected {
+  background-color: #002b89;
+  color: white;
+}
+
+/* body.dark-mode .access-btn:hover {
+  background-color: #4b5563;
+} */
+
+body.dark-mode .login-right {
+  background-color: #1f2937;
+}
+
+body.dark-mode input {
+  background-color: #111827;
+  color: white;
+  border: 1px solid #4b5563;
+}
+
+body.dark-mode .login-button {
+  background-color: #002b89;
+}
+
+body.dark-mode .login-button:hover {
+  background-color: #1d4ed8;
+}
+
+body.dark-mode .social-icons a {
+  color: #f3f4f6;
+}
+
+body.dark-mode .social-icons a:hover {
+  color: #facc15;
+}

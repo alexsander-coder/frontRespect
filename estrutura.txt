@@ -1,0 +1,38 @@
+src/
+├── App.tsx                          # Aponta para <AppRoutes />
+├── main.tsx                         # Ponto de entrada do React
+├── assets/
+│   └── react.svg
+├── components/                      # Componentes reutilizáveis
+│   └── ui/
+│       ├── Button.tsx
+│       └── Input.tsx
+├── features/
+│   ├── auth/
+│   │   ├── components/
+│   │   │   └── LoginForm.tsx
+│   │   ├── hooks/
+│   │   │   └── useAuth.ts
+│   │   ├── pages/
+│   │   │   └── LoginPage.tsx
+│   │   └── services/
+│   │       └── authService.ts       # login(), logout(), getUser()
+│   └── user/
+│       ├── components/
+│       └── pages/
+│           └── ProfilePage.tsx
+├── hooks/
+│   └── useLocalStorage.ts           # Se precisar persistir token
+├── layouts/
+│   └── DefaultLayout.tsx            # Layout com navbar, etc
+├── routes/
+│   └── AppRoutes.tsx                # Define rotas (com proteção)
+├── services/
+│   └── api.ts                       # Axios ou fetch configurado
+├── store/
+│   └── AuthContext.tsx              # Context API com auth
+├── types/
+│   └── User.ts                      # Tipagem de usuário
+├── utils/
+│   └── validateEmail.ts
+└── vite-env.d.ts

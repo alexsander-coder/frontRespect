@@ -1,0 +1,23 @@
+:root {
+  --background: #f9fafb;
+  --foreground: #ffffff;
+  --text-primary: #003366;
+  --button-bg: #0052cc;
+  --button-text: #ffffff;
+  --input-bg: #ffffff;
+  --input-border: #ccd6e0;
+  --link-color: #0052cc;
+  --link-hover: #003366;
+}
+
+body.dark-mode {
+  --background: #0e1a26;
+  --foreground: #152a40;
+  --text-primary: #facc15;
+  --button-bg: #1d4ed8;
+  --button-text: #ffffff;
+  --input-bg: #1e293b;
+  --input-border: #334155;
+  --link-color: #93c5fd;
+  --link-hover: #60a5fa;
+}

@@ -1,0 +1,133 @@
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+
+.links-inline {
+  display: flex;
+  justify-content: space-around;
+  /* gap: 16px; */
+  font-size: 0.9rem;
+  margin-top: 3px;
+  font-weight: 400;
+}
+
+.links-inline a {
+  color: #0052cc;
+  text-decoration: none;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.links-inline a:hover {
+  /* color: #003366;*/
+  text-decoration: underline;
+}
+
+.whatsapp-icon {
+  font-size: 1.2rem;
+  color: #25D366;
+  margin-left: -328px;
+  /* controla a distância entre o ícone e o texto */
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.login-button {
+  background-color: #0052cc;
+  color: white;
+  border: none;
+  padding: 10px 0px;
+  border-radius: 7px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 465px;
+}
+
+.login-button:hover {
+  background-color: #003366;
+  transform: translateY(-1px);
+}
+
+
+
+.input-group {
+  width: 100%;
+}
+
+/* Wrapper se for usar ícones (opcional) */
+.input-icon-wrapper {
+  position: relative;
+}
+
+/* Campo de entrada refinado */
+.input-field {
+  width: 100%;
+  padding: 10px 0px;
+  padding-left: 14px;
+  /* ou 40px se usar ícone */
+  border: 1px solid #ccd6e0;
+  border-radius: 7px;
+  font-size: 1rem;
+  background-color: #fafbfd;
+  color: #333;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.input-field::placeholder {
+  color: #999;
+  font-size: 0.95rem;
+}
+
+.input-field:focus {
+  border-color: #004080;
+  background-color: #fff;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 64, 128, 0.1);
+}
+
+/* Ícone dentro do input (caso use) */
+.input-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+}
+
+.input-icon img {
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+}
+
+
+@media (max-width: 768px) {
+  .login-button {
+    width: 100%;
+    /* botão ocupa toda a largura do container pai */
+  }
+
+  .input-field {
+    font-size: 0.95rem;
+  }
+
+  .links-inline {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    font-weight: 400;
+  }
+}
